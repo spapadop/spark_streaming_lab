@@ -11,7 +11,7 @@ import java.util.List;
 public class Exercise_3 {
 
 
-    public static void get10MostPopularHashtagsHistorically(JavaDStream<Status> statuses) {
+    public static void historicalAnalysis(JavaDStream<Status> statuses) {
         JavaDStream<String> words = statuses
                 .flatMap(status -> Iterators.forArray(status.getText().split(" ")));
 
